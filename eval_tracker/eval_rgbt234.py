@@ -2,7 +2,7 @@ import rgbt
 from seqList import where_seq_already
 
 rgbt234 = rgbt.RGBT234()
-result_path = "./tracking_result//caformer/vit_cte_cma_st_f3_lr5e5_ep015/rgbt234"
+result_path = "./tracking_result//caformer/vit_cte_cma_st_f3_lr5e5_ep015/rgbt234"   # 88.5, 66.1
 seq_li,l = where_seq_already(result_path)
 print(l)
 
