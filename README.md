@@ -9,8 +9,10 @@ We train and test our model on two Nvidia 2080ti GPU.
 
 # Train
 
+Download SOT pretrained model from [OSTrack](https://github.com/botaoye/OSTrack).
 ```bash
 cd your_proj_path
+python utils/make_pretrained.py
 sh experiments/caformer/train.sh
 ```
 
