@@ -45,6 +45,7 @@ class CAFormer(nn.Module):
                 cte_template_mask=None,
                 cte_keep_rate=None,
                 return_last_attn=False,
+                weight=0.5
                 ):
         # NOTE: x[0] is rgb
         assert len(template)==2 and len(search)==2
@@ -52,7 +53,8 @@ class CAFormer(nn.Module):
                                                                 x_rgb=search[0], x_tir=search[1],
                                     cte_template_mask=cte_template_mask,
                                     cte_keep_rate=cte_keep_rate,
-                                    return_last_attn=return_last_attn, )
+                                    return_last_attn=return_last_attn, 
+                                    weight=weight)
 
         aux_dict = {'aux_dict_rgb':aux_dict_rgb, 'aux_dict_tir':aux_dict_tir}
         x = torch.cat([x_rgb,x_tir],2)

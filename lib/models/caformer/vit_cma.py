@@ -187,7 +187,7 @@ class VisionTransformer_CMA(VisionTransformer):
         return x_rgb, x_tir, aux_dict_rgb, aux_dict_tir
 
 
-    def forward(self, z_rgb,z_tir, x_rgb,x_tir, ce_template_mask=None, ce_keep_rate=None, return_last_attn=False):
+    def forward(self, z_rgb,z_tir, x_rgb,x_tir, **args):
 
         return self.forward_features(z_rgb=z_rgb, z_tir=z_tir, x_rgb=x_rgb, x_tir=x_tir)
 

@@ -134,7 +134,7 @@ class CMA_CTEBlock(nn.Module):
 
 
     def forward(self, x_rgb, x_tir, global_index_t, global_index_s, mask, 
-                cte_template_mask, keep_ratio_search, pos_emb, pos_emb_z):
+                cte_template_mask, keep_ratio_search, pos_emb, pos_emb_z, weight=0.5):
         
 
         x_rgb_norm = self.norm1(x_rgb)
@@ -197,7 +197,7 @@ class CMA_CTEBlock(nn.Module):
         x_rgb = x_rgb + self.drop_path(x_rgb_attn)
         x_tir = x_tir + self.drop_path(x_tir_attn)
         
-        attn_all = corrmap_rgb+corrmap_tir
+        attn_all = corrmap_rgb*weight+corrmap_tir*(1-weight)
         x_rgb, _,_,_ = \
             self.keep_token(x_rgb, attn_all, global_index_t, global_index_s, cte_template_mask, keep_ratio_search)
         x_tir, global_index_t, global_index_s, removed_index_s = \

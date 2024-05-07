@@ -132,7 +132,7 @@ class VisionTransformer_CTE_CMA(VisionTransformer):
 
     def forward_features(self, z_rgb, z_tir, x_rgb, x_tir, mask_z=None, mask_x=None,
                          cte_template_mask=None, cte_keep_rate=None,
-                         return_last_attn=False
+                         return_last_attn=False, weight=0.5
                          ):
         
         global_index_s_layers = []
@@ -201,7 +201,7 @@ class VisionTransformer_CTE_CMA(VisionTransformer):
         for i, blk in enumerate(self.blocks):
             x_rgb, x_tir, global_index_t, global_index_s, removed_index_s, attn_rgb, attn_tir = \
                 blk(x_rgb, x_tir, global_index_t, global_index_s, \
-                        mask_x, cte_template_mask, cte_keep_rate, pos_emb_input, pos_emb_z)
+                        mask_x, cte_template_mask, cte_keep_rate, pos_emb_input, pos_emb_z, weight)
             attn_rgb_li.append(attn_rgb); attn_tir_li.append(attn_tir)
             
             if self.cte_loc is not None and i in self.cte_loc:
@@ -278,11 +278,11 @@ class VisionTransformer_CTE_CMA(VisionTransformer):
         return x_rgb, x_tir, aux_dict_rgb, aux_dict_tir
 
 
-    def forward(self, z_rgb,z_tir, x_rgb,x_tir, cte_template_mask=None, cte_keep_rate=None, return_last_attn=False):
+    def forward(self, z_rgb,z_tir, x_rgb,x_tir, cte_template_mask=None, cte_keep_rate=None, return_last_attn=False, weight=0.5):
 
         return self.forward_features(z_rgb=z_rgb, z_tir=z_tir,
                                      x_rgb=x_rgb, x_tir=x_tir,
-                                     cte_template_mask=cte_template_mask, cte_keep_rate=cte_keep_rate,)
+                                     cte_template_mask=cte_template_mask, cte_keep_rate=cte_keep_rate, weight=weight)
 
 
 
