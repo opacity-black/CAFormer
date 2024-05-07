@@ -1,5 +1,6 @@
 import torch
 
+# Download SOT pretrained model from OSTrack, then run this program.
 stateDict = torch.load("./pretrained/OSTrack_ep0300.pth.tar", map_location="cpu")
 for k,v in list(stateDict.items()):
     # if 'box_head' in k:
