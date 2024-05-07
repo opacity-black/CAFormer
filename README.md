@@ -2,8 +2,10 @@
 
 # Introduction
 ![img](./imgs/framework.png)
+The official implementation of the paper [Cross-modulated Attention Transformer for RGBT Tracking]().
 
-The framework of CAFormer is shown in the above figure.
+# device
+We train and test our model on two Nvidia 2080ti GPU.
 
 # Train
 
@@ -11,10 +13,6 @@ The framework of CAFormer is shown in the above figure.
 cd your_proj_path
 sh experiments/caformer/train.sh
 ```
-
-## download
-
-coming soon...
 
 # Test
 
@@ -26,6 +24,21 @@ sh experiments/caformer/test234.sh
 sh experiments/caformer/test245.sh
 ```
 
-## evaluation
+# evaluation
 
-You can evaluate tracking results using the file in `eval_tracker` quickly.
+You can use the files in `eval_tracker` to quickly evaluate the tracking results.
+
+# download
+
+Tracker | RGBT234 | LasHeR | VTUAV | model | result
+---|---|---|---|---|---
+CAFormer | 88.3/66.4 | 70.0/55.6| -/- | [download](https://pan.baidu.com/s/1OMl8FgIJF-8DUPu26auQCg?pwd=catp) | [download](https://pan.baidu.com/s/1OMl8FgIJF-8DUPu26auQCg?pwd=catp)
+CAFormer | -/- | -/- | 88.6/76.2 | [download](https://pan.baidu.com/s/1OMl8FgIJF-8DUPu26auQCg?pwd=catp) | [download](https://pan.baidu.com/s/1OMl8FgIJF-8DUPu26auQCg?pwd=catp)
+
+# Citation
+```
+@
+```
+
+# Acknowledgments
+Thanks for the [OSTrack](https://github.com/botaoye/OSTrack), which helps us to quickly implement our ideas.
