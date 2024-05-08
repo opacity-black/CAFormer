@@ -2,11 +2,9 @@ import rgbt
 from seqList import *
 lasher = rgbt.LasHeR()
 
-result_path = "./tracking_result//caformer/vit_cte_cma_st_f3_lr5e5_ep015/lashertestingset"
+result_path = ""
 seq_list,l = where_seq_already(result_path)
 print(l)
-
-print("序列数", len(seq_list))
 
 
 lasher(
