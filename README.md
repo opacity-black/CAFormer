@@ -32,10 +32,10 @@ You can use the files in `eval_tracker` to quickly evaluate the tracking results
 
 # download
 
-Tracker | RGBT234 | LasHeR | VTUAV | model | result
----|---|---|---|---|---
-CAFormer | 88.3/66.4 | 70.0/55.6| -/- | [download](https://pan.baidu.com/s/1OMl8FgIJF-8DUPu26auQCg?pwd=catp) | [download](https://pan.baidu.com/s/1OMl8FgIJF-8DUPu26auQCg?pwd=catp)
-CAFormer | -/- | -/- | 88.6/76.2 | [download](https://pan.baidu.com/s/1OMl8FgIJF-8DUPu26auQCg?pwd=catp) | [download](https://pan.baidu.com/s/1OMl8FgIJF-8DUPu26auQCg?pwd=catp)
+Training Dataset | RGBT234 | LasHeR | VTUAV-ST | model & result
+---|---|---|---|---
+LasHeR | 88.3/66.4 | 70.0/55.6| -/- | [download](https://pan.baidu.com/s/1OMl8FgIJF-8DUPu26auQCg?pwd=catp)
+VTUAV  | -/-      | -/- | 88.6/76.2 | [download](https://pan.baidu.com/s/1OMl8FgIJF-8DUPu26auQCg?pwd=catp)
 
 # Citation
 ```
