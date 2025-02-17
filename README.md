@@ -41,7 +41,7 @@ VTUAV  | -/-      | -/- | 88.6/76.2 | [download](https://pan.baidu.com/s/1OMl8Fg
 ```
 @inproceedings{CAFormer,
   title={Cross-modulated Attention Transformer for RGBT Tracking},
-  author={Yun Xiao, Jiacong Zhao, Andong Lu, Chenglong Li, Yin Lin, Bing Yin, Cong Liu},
+  author={Yun Xiao, Jiacong Zhao, Andong Lu, Chenglong Li, Bing Yin, Yin Lin, Cong Liu},
   booktitle={AAAI Conference on Artificial Intelligence},
   year={2025}
 }
