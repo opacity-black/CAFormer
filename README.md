@@ -10,11 +10,13 @@ We train and test our model on two Nvidia 2080ti GPU.
 # Train
 
 Download SOT pretrained model from [OSTrack](https://github.com/botaoye/OSTrack).
+Or download from [CAFormer_SOTPretrained.pth.tar](https://pan.baidu.com/s/1BPxt4b9SCuY8VcKFFGdM9Q?pwd=zq6s)
 ```bash
 cd your_proj_path
-python utils/make_pretrained.py
+python utils/make_pretrained.py  # if you download model weight from ostrack
 sh experiments/caformer/train.sh
 ```
+
 
 # Test
 
